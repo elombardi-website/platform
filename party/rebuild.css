@@ -254,7 +254,7 @@ p.note .src{ margin:0 2px; }
     text-transform:uppercase; margin-bottom:8px; font-family:var(--sans); }
   .match .mf::before{ content:'What the reviews found'; color:var(--mute); }
   .match .mrsp{ display:block; font-size:14.5px; padding-top:14px; }
-  .match .mrsp::before{ content:'What party leadership should do'; color:var(--red); }
+  .match .mrsp::before{ content:'What we would do'; color:var(--red); }
   .match .mr:first-of-type .mf{ border-top:0; }
   .planh, .know h3{ font-size:12.5px; }
 }
