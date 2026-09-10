@@ -62,6 +62,21 @@
     <div class="draftnote rv">Draft for discussion · to be rewritten in Eric's voice</div>
   </section>
 
+  <!-- ============================ MOBILE CONTENTS ============================ -->
+  <section class="blk mtoc" id="contents">
+    <div class="kicker grey rv">What is in the plan</div>
+    <div class="toclist rv d1">
+      <a href="#ledger"><span class="n">—</span><span class="t"><b>What we know</b><span>Three losses, three reviews, and the same findings each time.</span></span></a>
+      <a href="#candidates"><span class="n">01</span><span class="t"><b>Candidates</b><span>Inventory every seat, recruit outside talent, half of ridings nominated by summer 2027 and all by the end of 2027.</span></span></a>
+      <a href="#platform"><span class="n">02</span><span class="t"><b>Platform</b><span>Developed by topic and by region with members and caucus, refined at convention, published summer 2027.</span></span></a>
+      <a href="#ridings"><span class="n">03</span><span class="t"><b>Ridings &amp; members</b><span>A Membership Drive Fund, regional coordination, organizers in every region, ideas and time before money.</span></span></a>
+      <a href="#ops"><span class="n">04</span><span class="t"><b>Technology &amp; operations</b><span>One application for members and volunteers, a vendor audit, recorded training, a campaign director from inside the party.</span></span></a>
+      <a href="#comms"><span class="n">05</span><span class="t"><b>Communication</b><span>Ideas first, a leader everywhere, a big tent, and an end to language policing.</span></span></a>
+      <a href="#money"><span class="n">06</span><span class="t"><b>Fundraising</b><span>An always-on plan, purpose-driven asks, and results and costs in the open.</span></span></a>
+      <a href="#timeline"><span class="n">—</span><span class="t"><b>The Next 900 Days</b><span>From the leadership result to the June 2029 election date.</span></span></a>
+    </div>
+  </section>
+
   <!-- ============================ LEDGER ============================ -->
   <section class="blk" id="ledger">
     <div class="kicker grey rv">What we already know</div>
@@ -446,7 +461,7 @@
   var mg=document.getElementById('mguide'), mgcur=document.getElementById('mgcur'), mgbtn=document.getElementById('mgbtn'), mgpanel=document.getElementById('mgpanel');
   var hero=document.querySelector('.hero');
   function rail(){var y=window.scrollY+140;var cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});
-    if(mg){var past=window.scrollY>(hero?hero.offsetTop+hero.offsetHeight-60:400);mg.hidden=!past;
+    if(mg){var toc=document.getElementById('contents');var gate=(toc&&toc.offsetParent)?toc.offsetTop+toc.offsetHeight-80:(hero?hero.offsetTop+hero.offsetHeight-60:400);var past=window.scrollY>gate;mg.hidden=!past;
       var a=links[cur];if(a){var n=a.querySelector('.n').textContent;mgcur.textContent=(n==='—'?'':n+' · ')+a.textContent.replace(n,'').trim();}
       mgpanel.querySelectorAll('a').forEach(function(x,i){x.classList.toggle('on',i===cur);});}}
   if(mgbtn){mgbtn.addEventListener('click',function(){var o=mgpanel.hidden;mgpanel.hidden=!o;mgbtn.setAttribute('aria-expanded',o);mg.classList.toggle('open',o);});
