@@ -155,7 +155,8 @@
 .inputs .inp h3{ font-size:14.5px; }
 .inputs .inp p{ font-size:12.5px; line-height:1.45; }
 .inputs .inp .ik{ font-size:10px; }
-@media (max-width:900px){ .inputs .inp{ flex:0 0 78%; } }
+@media (max-width:900px){ .inputs .inp{ flex:0 0 calc(50% - 7px); } }
+@media (max-width:640px){ .inputs .inp{ flex:0 0 78%; } }
 .inp .q{ font-size:13.5px; line-height:1.35; padding-left:10px; }
 
 /* ---- v2: source badges ---- */
