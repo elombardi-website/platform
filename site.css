@@ -315,3 +315,29 @@ table.fa th.r, table.fa td.r{ width:82px; }
 
 /* centre the PDF download card within the page */
 .dlcard{ justify-content:center; }
+
+/* ---- 00 card: sits above the chapter grid ---- */
+.zero{ display:grid; grid-template-columns:250px 1fr; width:calc(100% - 44px); max-width:calc(var(--maxw) - 44px); margin:0 auto 54px;
+  background:var(--near-black); color:var(--ink-on-dark); border-radius:16px; text-decoration:none; overflow:hidden;
+  box-shadow:0 1px 2px rgba(16,16,16,.06), 0 18px 40px rgba(16,16,16,.18); transition:transform .15s ease, box-shadow .15s ease; }
+.zero:hover{ transform:translateY(-3px); box-shadow:0 4px 10px rgba(16,16,16,.08), 0 26px 54px rgba(16,16,16,.24); }
+.zero .zimg{ background:#1a1a1c; }
+.zero .zimg img{ width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block; filter:saturate(.9); }
+.zero .zbody{ padding:30px 34px 28px; min-width:0; }
+.zero h3{ font-family:var(--disp); font-weight:700; font-size:clamp(24px,3vw,32px); line-height:1.1; color:#fff; letter-spacing:-0.02em; margin:0; }
+.zero .znum{ color:var(--red); margin-right:18px; }
+.zero p{ font-size:15px; line-height:1.55; color:var(--ink-on-dark); margin:12px 0 0; }
+.zero .zparts{ margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,.12); display:grid; grid-template-columns:repeat(3,auto); gap:9px 26px; justify-content:start; }
+.zero .zparts span{ font-size:13.5px; font-weight:600; color:#fff; white-space:nowrap; }
+.zero .zparts span b{ font-family:var(--disp); font-weight:700; font-size:12px; color:var(--red); margin-right:8px; }
+.zero .zgo{ margin-top:18px; font-weight:700; font-size:14px; color:var(--red); }
+.zero:hover .zgo{ color:#fff; }
+.gridsec{ padding-top:54px; }
+@media (max-width:900px){ .zero{ grid-template-columns:200px 1fr; } .zero .zparts{ grid-template-columns:repeat(2,auto); } }
+@media (max-width:720px){ .zero{ grid-template-columns:1fr; }
+  .zero .zimg{ height:170px; } .zero .zimg img{ object-position:50% 25%; }
+  .zero .zbody{ padding:22px 22px 22px; }
+  .zero .znum{ display:block; margin:0 0 6px; font-size:20px; }
+  .zero .zparts{ grid-template-columns:1fr; gap:10px; }
+  .zero .zparts span{ white-space:normal; display:flex; align-items:baseline; }
+  .zero .zparts span b{ flex:0 0 30px; margin-right:0; } }
